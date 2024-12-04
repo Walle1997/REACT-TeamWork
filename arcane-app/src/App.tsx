@@ -1,57 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import LoginPage from './pages/LoginPage';
+import AuthenticationPage from './pages/AuthenticationPage';
+import FavoritePage from './pages/FavoritePage';
+import ErrorPage from './pages/ErrorPage';
+
 import './App.css';
+import HistoryPage from './pages/HistoryPage';
+import FilmPage from './pages/FilmPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Routes>
+      <Route path='' element={<MainPage/>}/>
+      <Route path='/signin' element={<LoginPage/>}/>
+      <Route path='/signup' element={<AuthenticationPage/>}/>
+      <Route path='/favorites' element={<FavoritePage/>}/>
+      <Route path='/history' element={<HistoryPage/>}/>
+      <Route path='/film/:id' element={<FilmPage/>}/>
+
+      <Route path='*' element={<ErrorPage/>} />
+    </Routes>
   );
 }
 
