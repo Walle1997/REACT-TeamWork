@@ -8,10 +8,10 @@ function Header() {
     <div className={'Header'}>
       <Link to={'/'} className={'Header-title'}>Kino</Link>
       <div className={'Header-btns'}>
-        <Link to={'/signup'} className={'Header-btns-signup'}>
+        <Link to={'/signup'}>
           Регистрация
         </Link>
-        <Link to={'/signin'} className={'Header-btns-login'}>
+        <Link to={'/signin'}>
           Войти
         </Link>
       </div>

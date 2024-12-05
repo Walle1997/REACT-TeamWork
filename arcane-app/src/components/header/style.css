@@ -1,42 +1,19 @@
 .Header{
   height: 76px;
-  background-color: #000;
+  background-color: var(--dark-grey);
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
   align-items: center;
 }
 
-.Header-title {
-  color: #FF5500;
+.Header-title, .Header-title:hover {
+  color: var(--corall);
   font-size: 40px;
   font-weight: 700;
-  text-decoration: none;
 }
 
 .Header-btns {
   display: flex;
-  gap: 15px;
-}
-
-.Header-btns-signup,.Header-btns-login {
-  background: linear-gradient(0.25turn, #FF5500, #D1C600);
-  color: transparent;
-  background-clip: text;
-  border-radius: 5px;
-  font-size: 24px;
-  padding: 12px 40px;
-  border: none;
-  text-decoration: none;
-}
-
-.Header-btns-login {
-  background: linear-gradient(0.75turn, #FF5500, #D1C600);
-  background-clip: text;
-}
-
-.Header-btns-signup:hover,.Header-btns-login:hover {
-  cursor: pointer;
-  background: linear-gradient(0.25turn, #FF5500, #D1C600);
-  color: #000;
+  gap: 50px;
 }

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+:root {
+  --dark-grey:#383838;
+  --blue:#4AC9DB;
+  --corall:#FF8063;
+  --white: #fff;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,6 +35,17 @@ h2 {
 }
 
 p {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
+}
+
+a {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
 }
