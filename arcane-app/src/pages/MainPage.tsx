@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getFilmsData } from '../app/store/films/slice';
+import { clearFilmsData, getFilmsData } from '../app/store/films/slice';
 import { useAppDispatch, useAppSelector } from '../app/store/hooks';
 import PageLayout from '../components/page-layout/PageLayout';
 
@@ -10,6 +10,9 @@ const MainPage: React.FC = () => {
 
     useEffect(()=>{
         dispatch(getFilmsData())
+        return ()=>{
+            dispatch(clearFilmsData())
+        }
     },[])
 
     return (

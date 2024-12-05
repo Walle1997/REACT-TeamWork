@@ -42,6 +42,9 @@ export const filmsSlice = createSlice({
   name: 'films',
   initialState,
   reducers: {
+    clearFilmsData(state){
+      state.data = {}
+    }
   },
 
   extraReducers: (builder) => {
@@ -60,5 +63,6 @@ export const filmsSlice = createSlice({
 });
 
 export const selectFilms = (state: RootState) => state.films;
+export const { clearFilmsData } = filmsSlice.actions;
 
 export default filmsSlice.reducer;
